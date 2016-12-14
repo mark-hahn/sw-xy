@@ -1,0 +1,1388 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.38 build -256452561 
+                                                                                               Wed Dec 14 00:26:28 2016
+
+Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010351
+     1                           	processor	16F1459
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	idataCOMMON,global,class=CODE,delta=2
+     5                           	psect	idataBANK0,global,class=CODE,delta=2
+     6                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     7                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1
+     8                           	psect	dataCOMMON,global,class=COMMON,space=1,delta=1
+     9                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
+    10                           	psect	dataBANK0,global,class=BANK0,space=1,delta=1
+    11                           	psect	inittext,global,class=CODE,delta=2
+    12                           	psect	clrtext,global,class=CODE,delta=2
+    13                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+    14                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+    15                           	psect	maintext,global,class=CODE,merge=1,split=1,delta=2
+    16                           	psect	text1,local,class=CODE,merge=1,delta=2
+    17                           	psect	text2,local,class=CODE,merge=1,delta=2
+    18                           	psect	text3,local,class=CODE,merge=1,delta=2
+    19                           	psect	intentry,global,class=CODE,delta=2
+    20                           	psect	text5,local,class=CODE,merge=1,delta=2
+    21                           	dabs	1,0x7E,2
+    22  0000                     	;# 
+    23  0001                     	;# 
+    24  0002                     	;# 
+    25  0003                     	;# 
+    26  0004                     	;# 
+    27  0005                     	;# 
+    28  0006                     	;# 
+    29  0007                     	;# 
+    30  0008                     	;# 
+    31  0009                     	;# 
+    32  000A                     	;# 
+    33  000B                     	;# 
+    34  000C                     	;# 
+    35  000D                     	;# 
+    36  000E                     	;# 
+    37  0011                     	;# 
+    38  0012                     	;# 
+    39  0015                     	;# 
+    40  0016                     	;# 
+    41  0016                     	;# 
+    42  0017                     	;# 
+    43  0018                     	;# 
+    44  0019                     	;# 
+    45  001A                     	;# 
+    46  001B                     	;# 
+    47  001C                     	;# 
+    48  008C                     	;# 
+    49  008D                     	;# 
+    50  008E                     	;# 
+    51  0091                     	;# 
+    52  0092                     	;# 
+    53  0095                     	;# 
+    54  0096                     	;# 
+    55  0097                     	;# 
+    56  0098                     	;# 
+    57  0099                     	;# 
+    58  009A                     	;# 
+    59  009B                     	;# 
+    60  009B                     	;# 
+    61  009C                     	;# 
+    62  009D                     	;# 
+    63  009E                     	;# 
+    64  009F                     	;# 
+    65  010C                     	;# 
+    66  010D                     	;# 
+    67  010E                     	;# 
+    68  0111                     	;# 
+    69  0112                     	;# 
+    70  0113                     	;# 
+    71  0114                     	;# 
+    72  0115                     	;# 
+    73  0116                     	;# 
+    74  0117                     	;# 
+    75  0118                     	;# 
+    76  0119                     	;# 
+    77  011D                     	;# 
+    78  018C                     	;# 
+    79  018D                     	;# 
+    80  018E                     	;# 
+    81  0191                     	;# 
+    82  0191                     	;# 
+    83  0192                     	;# 
+    84  0193                     	;# 
+    85  0193                     	;# 
+    86  0194                     	;# 
+    87  0195                     	;# 
+    88  0196                     	;# 
+    89  0197                     	;# 
+    90  0199                     	;# 
+    91  019A                     	;# 
+    92  019B                     	;# 
+    93  019B                     	;# 
+    94  019C                     	;# 
+    95  019D                     	;# 
+    96  019E                     	;# 
+    97  019F                     	;# 
+    98  020C                     	;# 
+    99  020D                     	;# 
+   100  0211                     	;# 
+   101  0211                     	;# 
+   102  0212                     	;# 
+   103  0212                     	;# 
+   104  0213                     	;# 
+   105  0213                     	;# 
+   106  0214                     	;# 
+   107  0214                     	;# 
+   108  0215                     	;# 
+   109  0215                     	;# 
+   110  0215                     	;# 
+   111  0216                     	;# 
+   112  0216                     	;# 
+   113  0217                     	;# 
+   114  0217                     	;# 
+   115  0391                     	;# 
+   116  0392                     	;# 
+   117  0393                     	;# 
+   118  0394                     	;# 
+   119  0395                     	;# 
+   120  0396                     	;# 
+   121  039A                     	;# 
+   122  039B                     	;# 
+   123  0611                     	;# 
+   124  0612                     	;# 
+   125  0613                     	;# 
+   126  0613                     	;# 
+   127  0614                     	;# 
+   128  0615                     	;# 
+   129  0616                     	;# 
+   130  0616                     	;# 
+   131  0691                     	;# 
+   132  0692                     	;# 
+   133  0693                     	;# 
+   134  0694                     	;# 
+   135  0695                     	;# 
+   136  0E8E                     	;# 
+   137  0E8F                     	;# 
+   138  0E90                     	;# 
+   139  0E91                     	;# 
+   140  0E92                     	;# 
+   141  0E93                     	;# 
+   142  0E94                     	;# 
+   143  0E94                     	;# 
+   144  0E95                     	;# 
+   145  0E96                     	;# 
+   146  0E97                     	;# 
+   147  0E98                     	;# 
+   148  0E99                     	;# 
+   149  0E9A                     	;# 
+   150  0E9B                     	;# 
+   151  0E9C                     	;# 
+   152  0E9D                     	;# 
+   153  0E9E                     	;# 
+   154  0E9F                     	;# 
+   155  0FE4                     	;# 
+   156  0FE5                     	;# 
+   157  0FE6                     	;# 
+   158  0FE7                     	;# 
+   159  0FE8                     	;# 
+   160  0FE9                     	;# 
+   161  0FEA                     	;# 
+   162  0FEB                     	;# 
+   163  0FED                     	;# 
+   164  0FEE                     	;# 
+   165  0FEF                     	;# 
+   166  0000                     	;# 
+   167  0001                     	;# 
+   168  0002                     	;# 
+   169  0003                     	;# 
+   170  0004                     	;# 
+   171  0005                     	;# 
+   172  0006                     	;# 
+   173  0007                     	;# 
+   174  0008                     	;# 
+   175  0009                     	;# 
+   176  000A                     	;# 
+   177  000B                     	;# 
+   178  000C                     	;# 
+   179  000D                     	;# 
+   180  000E                     	;# 
+   181  0011                     	;# 
+   182  0012                     	;# 
+   183  0015                     	;# 
+   184  0016                     	;# 
+   185  0016                     	;# 
+   186  0017                     	;# 
+   187  0018                     	;# 
+   188  0019                     	;# 
+   189  001A                     	;# 
+   190  001B                     	;# 
+   191  001C                     	;# 
+   192  008C                     	;# 
+   193  008D                     	;# 
+   194  008E                     	;# 
+   195  0091                     	;# 
+   196  0092                     	;# 
+   197  0095                     	;# 
+   198  0096                     	;# 
+   199  0097                     	;# 
+   200  0098                     	;# 
+   201  0099                     	;# 
+   202  009A                     	;# 
+   203  009B                     	;# 
+   204  009B                     	;# 
+   205  009C                     	;# 
+   206  009D                     	;# 
+   207  009E                     	;# 
+   208  009F                     	;# 
+   209  010C                     	;# 
+   210  010D                     	;# 
+   211  010E                     	;# 
+   212  0111                     	;# 
+   213  0112                     	;# 
+   214  0113                     	;# 
+   215  0114                     	;# 
+   216  0115                     	;# 
+   217  0116                     	;# 
+   218  0117                     	;# 
+   219  0118                     	;# 
+   220  0119                     	;# 
+   221  011D                     	;# 
+   222  018C                     	;# 
+   223  018D                     	;# 
+   224  018E                     	;# 
+   225  0191                     	;# 
+   226  0191                     	;# 
+   227  0192                     	;# 
+   228  0193                     	;# 
+   229  0193                     	;# 
+   230  0194                     	;# 
+   231  0195                     	;# 
+   232  0196                     	;# 
+   233  0197                     	;# 
+   234  0199                     	;# 
+   235  019A                     	;# 
+   236  019B                     	;# 
+   237  019B                     	;# 
+   238  019C                     	;# 
+   239  019D                     	;# 
+   240  019E                     	;# 
+   241  019F                     	;# 
+   242  020C                     	;# 
+   243  020D                     	;# 
+   244  0211                     	;# 
+   245  0211                     	;# 
+   246  0212                     	;# 
+   247  0212                     	;# 
+   248  0213                     	;# 
+   249  0213                     	;# 
+   250  0214                     	;# 
+   251  0214                     	;# 
+   252  0215                     	;# 
+   253  0215                     	;# 
+   254  0215                     	;# 
+   255  0216                     	;# 
+   256  0216                     	;# 
+   257  0217                     	;# 
+   258  0217                     	;# 
+   259  0391                     	;# 
+   260  0392                     	;# 
+   261  0393                     	;# 
+   262  0394                     	;# 
+   263  0395                     	;# 
+   264  0396                     	;# 
+   265  039A                     	;# 
+   266  039B                     	;# 
+   267  0611                     	;# 
+   268  0612                     	;# 
+   269  0613                     	;# 
+   270  0613                     	;# 
+   271  0614                     	;# 
+   272  0615                     	;# 
+   273  0616                     	;# 
+   274  0616                     	;# 
+   275  0691                     	;# 
+   276  0692                     	;# 
+   277  0693                     	;# 
+   278  0694                     	;# 
+   279  0695                     	;# 
+   280  0E8E                     	;# 
+   281  0E8F                     	;# 
+   282  0E90                     	;# 
+   283  0E91                     	;# 
+   284  0E92                     	;# 
+   285  0E93                     	;# 
+   286  0E94                     	;# 
+   287  0E94                     	;# 
+   288  0E95                     	;# 
+   289  0E96                     	;# 
+   290  0E97                     	;# 
+   291  0E98                     	;# 
+   292  0E99                     	;# 
+   293  0E9A                     	;# 
+   294  0E9B                     	;# 
+   295  0E9C                     	;# 
+   296  0E9D                     	;# 
+   297  0E9E                     	;# 
+   298  0E9F                     	;# 
+   299  0FE4                     	;# 
+   300  0FE5                     	;# 
+   301  0FE6                     	;# 
+   302  0FE7                     	;# 
+   303  0FE8                     	;# 
+   304  0FE9                     	;# 
+   305  0FEA                     	;# 
+   306  0FEB                     	;# 
+   307  0FED                     	;# 
+   308  0FEE                     	;# 
+   309  0FEF                     	;# 
+   310                           
+   311                           	psect	idataCOMMON
+   312  00CF                     __pidataCOMMON:	
+   313                           
+   314                           ;initializer for _timerVal
+   315  00CF  34A5               	retlw	165
+   316                           
+   317                           	psect	idataBANK0
+   318  00A7                     __pidataBANK0:	
+   319                           
+   320                           ;initializer for _pwr2m1
+   321  00A7  3400               	retlw	0
+   322  00A8  3401               	retlw	1
+   323  00A9  3403               	retlw	3
+   324  00AA  3407               	retlw	7
+   325  00AB  340F               	retlw	15
+   326                           
+   327                           ;initializer for _raStepCode
+   328  00AC  3400               	retlw	0
+   329  00AD  3410               	retlw	16
+   330  00AE  3400               	retlw	0
+   331  00AF  3410               	retlw	16
+   332  00B0  3410               	retlw	16
+   333                           
+   334                           ;initializer for _rbStepCode
+   335  00B1  3400               	retlw	0
+   336  00B2  3400               	retlw	0
+   337  00B3  3410               	retlw	16
+   338  00B4  3410               	retlw	16
+   339  00B5  3430               	retlw	48
+   340                           
+   341                           ;initializer for _rcStepCode
+   342  00B6  3400               	retlw	0
+   343  00B7  3480               	retlw	128
+   344  00B8  3440               	retlw	64
+   345  00B9  34C0               	retlw	192
+   346  00BA  34C8               	retlw	200
+   347  000C                     _PORTA	set	12
+   348  000D                     _PORTB	set	13
+   349  000E                     _PORTC	set	14
+   350  000E                     _PORTCbits	set	14
+   351  0015                     _TMR0	set	21
+   352  005F                     _GIE	set	95
+   353  005E                     _PEIE	set	94
+   354  006E                     _RB6	set	110
+   355  006F                     _RB7	set	111
+   356  0074                     _RC4	set	116
+   357  0075                     _RC5	set	117
+   358  005D                     _TMR0IE	set	93
+   359  005A                     _TMR0IF	set	90
+   360  0095                     _OPTION_REG	set	149
+   361  0099                     _OSCCON	set	153
+   362  008E                     _TRISC	set	142
+   363  0465                     _TRISA5	set	1125
+   364  046C                     _TRISB4	set	1132
+   365  046D                     _TRISB5	set	1133
+   366  046E                     _TRISB6	set	1134
+   367  046F                     _TRISB7	set	1135
+   368  0473                     _TRISC3	set	1139
+   369  0474                     _TRISC4	set	1140
+   370  0475                     _TRISC5	set	1141
+   371  0476                     _TRISC6	set	1142
+   372  0477                     _TRISC7	set	1143
+   373  010E                     _LATC	set	270
+   374                           
+   375                           ; #config settings
+   376  0000                     
+   377                           	psect	cinit
+   378  0015                     start_initialization:	
+   379  0015                     __initialization:	
+   380                           
+   381                           ; Initialize objects allocated to COMMON
+   382  0015  3180  20CF  3180   	fcall	__pidataCOMMON	;fetch initializer
+   383  0018  00FB               	movwf	__pdataCOMMON& (0+127)
+   384                           
+   385                           ; Initialize objects allocated to BANK0
+   386  0019  30A7               	movlw	low __pidataBANK0
+   387  001A  0084               	movwf	4
+   388  001B  3080               	movlw	(high __pidataBANK0)| (0+128)
+   389  001C  0085               	movwf	5
+   390  001D  3020               	movlw	low __pdataBANK0
+   391  001E  0086               	movwf	6
+   392  001F  3000               	movlw	high __pdataBANK0
+   393  0020  0087               	movwf	7
+   394  0021  3014               	movlw	20
+   395  0022  3180  20C3  3180   	fcall	init_ram
+   396                           
+   397                           ; Clear objects allocated to COMMON
+   398  0025  01F9               	clrf	__pbssCOMMON& (0+127)
+   399  0026  01FA               	clrf	(__pbssCOMMON+1)& (0+127)
+   400                           
+   401                           ; Clear objects allocated to BANK0
+   402  0027  3034               	movlw	low __pbssBANK0
+   403  0028  0084               	movwf	4
+   404  0029  3000               	movlw	high __pbssBANK0
+   405  002A  0085               	movwf	5
+   406  002B  3010               	movlw	16
+   407  002C  3180  20C9         	fcall	clear_ram0
+   408  002E                     end_of_initialization:	
+   409                           ;End of C runtime variable initialization code
+   410                           
+   411  002E                     __end_of__initialization:	
+   412  002E  107E               	bcf	int$flags,0	;clear compiler interrupt flag (level 1)
+   413  002F  0020               	movlb	0
+   414  0030  3180  2869         	ljmp	_main	;jump to C main() function
+   415                           
+   416                           	psect	bssCOMMON
+   417  0079                     __pbssCOMMON:	
+   418  0079                     _homed:	
+   419  0079                     	ds	1
+   420  007A                     _moving:	
+   421  007A                     	ds	1
+   422                           
+   423                           	psect	dataCOMMON
+   424  007B                     __pdataCOMMON:	
+   425  007B                     _timerVal:	
+   426  007B                     	ds	1
+   427                           
+   428                           	psect	bssBANK0
+   429  0034                     __pbssBANK0:	
+   430  0034                     _moveElapsedTime:	
+   431  0034                     	ds	4
+   432  0038                     _posH:	
+   433  0038                     	ds	2
+   434  003A                     _posV:	
+   435  003A                     	ds	2
+   436  003C                     _speedH:	
+   437  003C                     	ds	2
+   438  003E                     _speedV:	
+   439  003E                     	ds	2
+   440  0040                     _tgtPosH:	
+   441  0040                     	ds	2
+   442  0042                     _tgtPosV:	
+   443  0042                     	ds	2
+   444                           
+   445                           	psect	dataBANK0
+   446  0020                     __pdataBANK0:	
+   447  0020                     _pwr2m1:	
+   448  0020                     	ds	5
+   449  0025                     _raStepCode:	
+   450  0025                     	ds	5
+   451  002A                     _rbStepCode:	
+   452  002A                     	ds	5
+   453  002F                     _rcStepCode:	
+   454  002F                     	ds	5
+   455                           
+   456                           	psect	inittext
+   457  00C3                     init_ram:	
+   458  00C3  00FE               	movwf	126
+   459  00C4                     initloop:	
+   460  00C4  0012               	moviw fsr0++
+   461  00C5  001E               	movwi fsr1++
+   462  00C6  0BFE               	decfsz	126,f
+   463  00C7  28C4               	goto	initloop
+   464  00C8  3400               	retlw	0
+   465                           
+   466                           	psect	clrtext
+   467  00C9                     clear_ram0:	
+   468                           ;	Called with FSR0 containing the base address, and
+   469                           ;	WREG with the size to clear
+   470                           
+   471  00C9  0064               	clrwdt	;clear the watchdog before getting into this loop
+   472  00CA                     clrloop0:	
+   473  00CA  0180               	clrf	0	;clear RAM location pointed to by FSR
+   474  00CB  3101               	addfsr 0,1
+   475  00CC  0B89               	decfsz	9,f	;Have we reached the end of clearing yet?
+   476  00CD  28CA               	goto	clrloop0	;have we reached the end yet?
+   477  00CE  3400               	retlw	0	;all done for this memory range, return
+   478                           
+   479                           	psect	cstackCOMMON
+   480  0070                     __pcstackCOMMON:	
+   481  0070                     ?_resetSteppers:	
+   482  0070                     ?_initSteppers:	
+   483                           ; 1 bytes @ 0x0
+   484                           
+   485  0070                     ?_setUstepH:	
+   486                           ; 1 bytes @ 0x0
+   487                           
+   488  0070                     ?_stepperInt:	
+   489                           ; 1 bytes @ 0x0
+   490                           
+   491  0070                     ??_stepperInt:	
+   492                           ; 1 bytes @ 0x0
+   493                           
+   494  0070                     ?_all_ints:	
+   495                           ; 1 bytes @ 0x0
+   496                           
+   497  0070                     ?_main:	
+   498                           ; 1 bytes @ 0x0
+   499                           
+   500                           
+   501                           ; 1 bytes @ 0x0
+   502  0070                     	ds	1
+   503  0071                     ??_all_ints:	
+   504                           
+   505                           ; 1 bytes @ 0x1
+   506  0071                     	ds	1
+   507  0072                     ??_resetSteppers:	
+   508  0072                     ??_initSteppers:	
+   509                           ; 1 bytes @ 0x2
+   510                           
+   511  0072                     ??_setUstepH:	
+   512                           ; 1 bytes @ 0x2
+   513                           
+   514                           
+   515                           ; 1 bytes @ 0x2
+   516  0072                     	ds	1
+   517  0073                     setUstepH@x:	
+   518                           
+   519                           ; 1 bytes @ 0x3
+   520  0073                     	ds	1
+   521  0074                     setUstepH@latc:	
+   522                           
+   523                           ; 1 bytes @ 0x4
+   524  0074                     	ds	1
+   525  0075                     setUstepH@trisc:	
+   526                           
+   527                           ; 1 bytes @ 0x5
+   528  0075                     	ds	1
+   529  0076                     setUstepH@portc:	
+   530                           
+   531                           ; 1 bytes @ 0x6
+   532  0076                     	ds	1
+   533  0077                     setUstepH@code:	
+   534                           
+   535                           ; 1 bytes @ 0x7
+   536  0077                     	ds	1
+   537  0078                     setUstepH@ustep:	
+   538                           
+   539                           ; 1 bytes @ 0x8
+   540  0078                     	ds	1
+   541                           
+   542                           	psect	cstackBANK0
+   543  0044                     __pcstackBANK0:	
+   544  0044                     ??_main:	
+   545                           
+   546                           ; 1 bytes @ 0x0
+   547  0044                     	ds	2
+   548                           
+   549                           	psect	maintext
+   550  0069                     __pmaintext:	
+   551 ;;
+   552 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   553 ;;
+   554 ;; *************** function _main *****************
+   555 ;; Defined at:
+   556 ;;		line 82 in file "main-xy1.c"
+   557 ;; Parameters:    Size  Location     Type
+   558 ;;		None
+   559 ;; Auto vars:     Size  Location     Type
+   560 ;;		None
+   561 ;; Return value:  Size  Location     Type
+   562 ;;                  1    wreg      void 
+   563 ;; Registers used:
+   564 ;;		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+   565 ;; Tracked objects:
+   566 ;;		On entry : B1F/0
+   567 ;;		On exit  : 0/0
+   568 ;;		Unchanged: 0/0
+   569 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   570 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   571 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   572 ;;      Temps:          0       2       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   573 ;;      Totals:         0       2       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   574 ;;Total ram usage:        2 bytes
+   575 ;; Hardware stack levels required when called:    4
+   576 ;; This function calls:
+   577 ;;		_initSteppers
+   578 ;;		_setUstepH
+   579 ;; This function is called by:
+   580 ;;		Startup code after reset
+   581 ;; This function uses a non-reentrant model
+   582 ;;
+   583                           
+   584                           
+   585                           ;psect for function _main
+   586  0069                     _main:	
+   587                           
+   588                           ;main-xy1.c: 83: OSCCON = 0b00111100;
+   589                           
+   590                           ;incstack = 0
+   591                           ; Regs used in _main: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
+   592  0069  303C               	movlw	60
+   593  006A  0021               	movlb	1	; select bank1
+   594  006B  0099               	movwf	25	;volatile
+   595                           
+   596                           ;main-xy1.c: 84: initSteppers();
+   597  006C  3180  2090  3180   	fcall	_initSteppers
+   598                           
+   599                           ;main-xy1.c: 87: OPTION_REG = 2;
+   600  006F  3002               	movlw	2
+   601  0070  0021               	movlb	1	; select bank1
+   602  0071  0095               	movwf	21	;volatile
+   603                           
+   604                           ;main-xy1.c: 88: TMR0IE = 1;
+   605  0072  168B               	bsf	11,5	;volatile
+   606                           
+   607                           ;main-xy1.c: 89: TMR0IF = 0;
+   608  0073  110B               	bcf	11,2	;volatile
+   609                           
+   610                           ;main-xy1.c: 92: PEIE = 1;
+   611  0074  170B               	bsf	11,6	;volatile
+   612                           
+   613                           ;main-xy1.c: 93: GIE = 1;
+   614  0075  178B               	bsf	11,7	;volatile
+   615                           
+   616                           ;main-xy1.c: 95: setUstepH(0);
+   617  0076  3000               	movlw	0
+   618  0077  3180  2032  3180   	fcall	_setUstepH
+   619  007A                     l725:	
+   620                           ;main-xy1.c: 97: while (1) {
+   621                           
+   622                           
+   623                           ;main-xy1.c: 98: _delay((unsigned long)((500)*(48000000/4000000.0)));
+   624  007A  3008               	movlw	8
+   625  007B  0020               	movlb	0	; select bank0
+   626  007C  00C5               	movwf	??_main+1
+   627  007D  30C9               	movlw	201
+   628  007E  00C4               	movwf	??_main
+   629  007F                     u147:	
+   630  007F  0BC4               	decfsz	??_main,f
+   631  0080  287F               	goto	u147
+   632  0081  0BC5               	decfsz	??_main+1,f
+   633  0082  287F               	goto	u147
+   634  0083  3200               	nop2
+   635                           
+   636                           ;main-xy1.c: 99: RB7 = !RB7;
+   637  0084  3080               	movlw	128
+   638  0085  0020               	movlb	0	; select bank0
+   639  0086  068D               	xorwf	13,f
+   640                           
+   641                           ;main-xy1.c: 101: PORTCbits.RC4 = 0;
+   642  0087  120E               	bcf	14,4	;volatile
+   643                           
+   644                           ;main-xy1.c: 102: _delay((unsigned long)((1)*(48000000/4000000.0)));
+   645  0088  3003               	movlw	3
+   646  0089  00C4               	movwf	??_main
+   647  008A                     u157:	
+   648  008A  0BC4               	decfsz	??_main,f
+   649  008B  288A               	goto	u157
+   650  008C  3200               	nop2	;nop
+   651                           
+   652                           ;main-xy1.c: 103: PORTCbits.RC4 = 1;
+   653  008D  0020               	movlb	0	; select bank0
+   654  008E  160E               	bsf	14,4	;volatile
+   655  008F  287A               	goto	l725
+   656  0090                     __end_of_main:	
+   657                           
+   658                           	psect	text1
+   659  0032                     __ptext1:	
+   660 ;; *************** function _setUstepH *****************
+   661 ;; Defined at:
+   662 ;;		line 23 in file "stepper.c"
+   663 ;; Parameters:    Size  Location     Type
+   664 ;;  ustep           1    wreg     unsigned char 
+   665 ;; Auto vars:     Size  Location     Type
+   666 ;;  ustep           1    8[COMMON] unsigned char 
+   667 ;;  code            1    7[COMMON] unsigned char 
+   668 ;;  portc           1    6[COMMON] unsigned char 
+   669 ;;  trisc           1    5[COMMON] unsigned char 
+   670 ;;  latc            1    4[COMMON] unsigned char 
+   671 ;;  x               1    3[COMMON] unsigned char 
+   672 ;; Return value:  Size  Location     Type
+   673 ;;                  1    wreg      void 
+   674 ;; Registers used:
+   675 ;;		wreg, fsr1l, fsr1h, status,2, status,0
+   676 ;; Tracked objects:
+   677 ;;		On entry : 0/0
+   678 ;;		On exit  : 0/0
+   679 ;;		Unchanged: 0/0
+   680 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   681 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   682 ;;      Locals:         6       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   683 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   684 ;;      Totals:         7       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   685 ;;Total ram usage:        7 bytes
+   686 ;; Hardware stack levels used:    1
+   687 ;; Hardware stack levels required when called:    2
+   688 ;; This function calls:
+   689 ;;		Nothing
+   690 ;; This function is called by:
+   691 ;;		_main
+   692 ;; This function uses a non-reentrant model
+   693 ;;
+   694                           
+   695                           
+   696                           ;psect for function _setUstepH
+   697  0032                     _setUstepH:	
+   698                           
+   699                           ;incstack = 0
+   700                           ; Regs used in _setUstepH: [wreg+fsr1l+fsr1h+status,2+status,0]
+   701                           ;setUstepH@ustep stored from wreg
+   702  0032  00F8               	movwf	setUstepH@ustep
+   703                           
+   704                           ;stepper.c: 24: uint8_t x, latc=LATC, trisc=TRISC, portc=PORTC, code=rcStepCode[ustep];
+   705  0033  0022               	movlb	2	; select bank2
+   706  0034  080E               	movf	14,w	;volatile
+   707  0035  00F2               	movwf	??_setUstepH
+   708  0036  0872               	movf	??_setUstepH,w
+   709  0037  00F4               	movwf	setUstepH@latc
+   710  0038  0021               	movlb	1	; select bank1
+   711  0039  080E               	movf	14,w	;volatile
+   712  003A  00F2               	movwf	??_setUstepH
+   713  003B  0872               	movf	??_setUstepH,w
+   714  003C  00F5               	movwf	setUstepH@trisc
+   715  003D  0020               	movlb	0	; select bank0
+   716  003E  080E               	movf	14,w	;volatile
+   717  003F  00F2               	movwf	??_setUstepH
+   718  0040  0872               	movf	??_setUstepH,w
+   719  0041  00F6               	movwf	setUstepH@portc
+   720  0042  0878               	movf	setUstepH@ustep,w
+   721  0043  3E2F               	addlw	(low (_rcStepCode| 0))& (0+255)
+   722  0044  0086               	movwf	6
+   723  0045  0187               	clrf	7
+   724  0046  0801               	movf	1,w
+   725  0047  00F2               	movwf	??_setUstepH
+   726  0048  0872               	movf	??_setUstepH,w
+   727  0049  00F7               	movwf	setUstepH@code
+   728                           
+   729                           ;stepper.c: 25: LATC = x = (LATC & !0b11001000) | rcStepCode[ustep];
+   730  004A  0878               	movf	setUstepH@ustep,w
+   731  004B  3E2F               	addlw	(low (_rcStepCode| 0))& (0+255)
+   732  004C  0086               	movwf	6
+   733  004D  0187               	clrf	7
+   734  004E  0801               	movf	1,w
+   735  004F  00F3               	movwf	setUstepH@x
+   736  0050  0022               	movlb	2	; select bank2
+   737  0051  008E               	movwf	14	;volatile
+   738                           
+   739                           ;stepper.c: 26: latc=LATC, trisc=TRISC, portc=PORTC, code=rcStepCode[ustep];
+   740  0052  080E               	movf	14,w	;volatile
+   741  0053  00F2               	movwf	??_setUstepH
+   742  0054  0872               	movf	??_setUstepH,w
+   743  0055  00F4               	movwf	setUstepH@latc
+   744  0056  0021               	movlb	1	; select bank1
+   745  0057  080E               	movf	14,w	;volatile
+   746  0058  00F2               	movwf	??_setUstepH
+   747  0059  0872               	movf	??_setUstepH,w
+   748  005A  00F5               	movwf	setUstepH@trisc
+   749  005B  0020               	movlb	0	; select bank0
+   750  005C  080E               	movf	14,w	;volatile
+   751  005D  00F2               	movwf	??_setUstepH
+   752  005E  0872               	movf	??_setUstepH,w
+   753  005F  00F6               	movwf	setUstepH@portc
+   754  0060  0878               	movf	setUstepH@ustep,w
+   755  0061  3E2F               	addlw	(low (_rcStepCode| 0))& (0+255)
+   756  0062  0086               	movwf	6
+   757  0063  0187               	clrf	7
+   758  0064  0801               	movf	1,w
+   759  0065  00F2               	movwf	??_setUstepH
+   760  0066  0872               	movf	??_setUstepH,w
+   761  0067  00F7               	movwf	setUstepH@code
+   762  0068  0008               	return
+   763  0069                     __end_of_setUstepH:	
+   764                           
+   765                           	psect	text2
+   766  0090                     __ptext2:	
+   767 ;; *************** function _initSteppers *****************
+   768 ;; Defined at:
+   769 ;;		line 15 in file "stepper.c"
+   770 ;; Parameters:    Size  Location     Type
+   771 ;;		None
+   772 ;; Auto vars:     Size  Location     Type
+   773 ;;		None
+   774 ;; Return value:  Size  Location     Type
+   775 ;;                  1    wreg      void 
+   776 ;; Registers used:
+   777 ;;		status,2, status,0, pclath, cstack
+   778 ;; Tracked objects:
+   779 ;;		On entry : 0/0
+   780 ;;		On exit  : 0/0
+   781 ;;		Unchanged: 0/0
+   782 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   783 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   784 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   785 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   786 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   787 ;;Total ram usage:        0 bytes
+   788 ;; Hardware stack levels used:    1
+   789 ;; Hardware stack levels required when called:    3
+   790 ;; This function calls:
+   791 ;;		_resetSteppers
+   792 ;; This function is called by:
+   793 ;;		_main
+   794 ;; This function uses a non-reentrant model
+   795 ;;
+   796                           
+   797                           
+   798                           ;psect for function _initSteppers
+   799  0090                     _initSteppers:	
+   800                           
+   801                           ;stepper.c: 16: RC4 = RB6 = 1;
+   802                           
+   803                           ;incstack = 0
+   804                           ; Regs used in _initSteppers: [status,2+status,0+pclath+cstack]
+   805  0090  0020               	movlb	0	; select bank0
+   806  0091  170D               	bsf	13,6	;volatile
+   807  0092  1F0D               	btfss	13,6	;volatile
+   808  0093  2897               	goto	u100
+   809  0094  0020               	movlb	0	; select bank0
+   810  0095  160E               	bsf	14,4	;volatile
+   811  0096  2899               	goto	u114
+   812  0097                     u100:	
+   813  0097  0020               	movlb	0	; select bank0
+   814  0098  120E               	bcf	14,4	;volatile
+   815  0099                     u114:	
+   816                           
+   817                           ;stepper.c: 17: TRISC7 = TRISC6 = TRISC3 = TRISC5 = TRISC4 = 0;
+   818  0099  0021               	movlb	1	; select bank1
+   819  009A  120E               	bcf	14,4	;volatile
+   820  009B  128E               	bcf	14,5	;volatile
+   821  009C  118E               	bcf	14,3	;volatile
+   822  009D  130E               	bcf	14,6	;volatile
+   823  009E  138E               	bcf	14,7	;volatile
+   824                           
+   825                           ;stepper.c: 18: TRISA5 = TRISB4 = TRISB5 = TRISB7 = TRISB6 = 0;
+   826  009F  130D               	bcf	13,6	;volatile
+   827  00A0  138D               	bcf	13,7	;volatile
+   828  00A1  128D               	bcf	13,5	;volatile
+   829  00A2  120D               	bcf	13,4	;volatile
+   830  00A3  128C               	bcf	12,5	;volatile
+   831                           
+   832                           ;stepper.c: 20: resetSteppers();
+   833  00A4  3180  20D0         	fcall	_resetSteppers
+   834  00A6  0008               	return
+   835  00A7                     __end_of_initSteppers:	
+   836                           
+   837                           	psect	text3
+   838  00D0                     __ptext3:	
+   839 ;; *************** function _resetSteppers *****************
+   840 ;; Defined at:
+   841 ;;		line 58 in file "stepper.c"
+   842 ;; Parameters:    Size  Location     Type
+   843 ;;		None
+   844 ;; Auto vars:     Size  Location     Type
+   845 ;;		None
+   846 ;; Return value:  Size  Location     Type
+   847 ;;                  1    wreg      void 
+   848 ;; Registers used:
+   849 ;;		None
+   850 ;; Tracked objects:
+   851 ;;		On entry : 0/0
+   852 ;;		On exit  : 0/0
+   853 ;;		Unchanged: 0/0
+   854 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   855 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   856 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   857 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   858 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   859 ;;Total ram usage:        0 bytes
+   860 ;; Hardware stack levels used:    1
+   861 ;; Hardware stack levels required when called:    2
+   862 ;; This function calls:
+   863 ;;		Nothing
+   864 ;; This function is called by:
+   865 ;;		_initSteppers
+   866 ;;		_atHome
+   867 ;;		_lostPos
+   868 ;; This function uses a non-reentrant model
+   869 ;;
+   870                           
+   871                           
+   872                           ;psect for function _resetSteppers
+   873  00D0                     _resetSteppers:	
+   874                           
+   875                           ;incstack = 0
+   876                           ; Regs used in _resetSteppers: []
+   877  00D0  0008               	return
+   878  00D1                     __end_of_resetSteppers:	
+   879                           
+   880                           	psect	intentry
+   881  0004                     __pintentry:	
+   882 ;; *************** function _all_ints *****************
+   883 ;; Defined at:
+   884 ;;		line 75 in file "main-xy1.c"
+   885 ;; Parameters:    Size  Location     Type
+   886 ;;		None
+   887 ;; Auto vars:     Size  Location     Type
+   888 ;;		None
+   889 ;; Return value:  Size  Location     Type
+   890 ;;                  1    wreg      void 
+   891 ;; Registers used:
+   892 ;;		wreg, status,2, status,0, pclath, cstack
+   893 ;; Tracked objects:
+   894 ;;		On entry : 0/0
+   895 ;;		On exit  : 0/0
+   896 ;;		Unchanged: 0/0
+   897 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   898 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   899 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   900 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   901 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   902 ;;Total ram usage:        1 bytes
+   903 ;; Hardware stack levels used:    1
+   904 ;; Hardware stack levels required when called:    1
+   905 ;; This function calls:
+   906 ;;		_stepperInt
+   907 ;; This function is called by:
+   908 ;;		Interrupt level 1
+   909 ;; This function uses a non-reentrant model
+   910 ;;
+   911                           
+   912  0004                     _all_ints:	
+   913                           
+   914                           ;incstack = 0
+   915  0004  147E               	bsf	126,0	;set compiler interrupt flag (level 1)
+   916                           
+   917                           ; Regs used in _all_ints: [wreg+status,2+status,0+pclath+cstack]
+   918  0005  3180               	pagesel	$
+   919  0006  0020               	movlb	0	; select bank0
+   920  0007  087F               	movf	127,w
+   921  0008  00F1               	movwf	??_all_ints
+   922                           
+   923                           ;main-xy1.c: 76: if (TMR0IF) {
+   924  0009  1D0B               	btfss	11,2	;volatile
+   925  000A  280E               	goto	i1l80
+   926                           
+   927                           ;main-xy1.c: 77: TMR0IF = 0;
+   928  000B  110B               	bcf	11,2	;volatile
+   929                           
+   930                           ;main-xy1.c: 78: stepperInt();
+   931  000C  3180  20BB         	fcall	_stepperInt
+   932  000E                     i1l80:	
+   933  000E  0871               	movf	??_all_ints,w
+   934  000F  0020               	movlb	0	; select bank0
+   935  0010  00FF               	movwf	127
+   936  0011  107E               	bcf	126,0	;clear compiler interrupt flag (level 1)
+   937  0012  0009               	retfie
+   938  0013                     __end_of_all_ints:	
+   939                           
+   940                           	psect	text5
+   941  00BB                     __ptext5:	
+   942 ;; *************** function _stepperInt *****************
+   943 ;; Defined at:
+   944 ;;		line 70 in file "main-xy1.c"
+   945 ;; Parameters:    Size  Location     Type
+   946 ;;		None
+   947 ;; Auto vars:     Size  Location     Type
+   948 ;;		None
+   949 ;; Return value:  Size  Location     Type
+   950 ;;                  1    wreg      void 
+   951 ;; Registers used:
+   952 ;;		wreg
+   953 ;; Tracked objects:
+   954 ;;		On entry : 0/0
+   955 ;;		On exit  : 0/0
+   956 ;;		Unchanged: 0/0
+   957 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12
+   958 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   959 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   960 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   961 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0
+   962 ;;Total ram usage:        1 bytes
+   963 ;; Hardware stack levels used:    1
+   964 ;; This function calls:
+   965 ;;		Nothing
+   966 ;; This function is called by:
+   967 ;;		_all_ints
+   968 ;; This function uses a non-reentrant model
+   969 ;;
+   970                           
+   971                           
+   972                           ;psect for function _stepperInt
+   973  00BB                     _stepperInt:	
+   974                           
+   975                           ;main-xy1.c: 71: RB6 = !RB6;
+   976                           
+   977                           ;incstack = 0
+   978                           ; Regs used in _stepperInt: [wreg]
+   979  00BB  3040               	movlw	64
+   980  00BC  0020               	movlb	0	; select bank0
+   981  00BD  068D               	xorwf	13,f
+   982                           
+   983                           ;main-xy1.c: 72: timerVal = TMR0;
+   984  00BE  0815               	movf	21,w	;volatile
+   985  00BF  00F0               	movwf	??_stepperInt
+   986  00C0  0870               	movf	??_stepperInt,w
+   987  00C1  00FB               	movwf	_timerVal
+   988  00C2  0008               	return
+   989  00C3                     __end_of_stepperInt:	
+   990  007E                     btemp	set	126	;btemp
+   991  007E                     int$flags	set	126
+   992  007E                     wtemp	set	126
+   993  007E                     wtemp0	set	126
+   994  0080                     wtemp1	set	128
+   995  0082                     wtemp2	set	130
+   996  0084                     wtemp3	set	132
+   997  0086                     wtemp4	set	134
+   998  0088                     wtemp5	set	136
+   999  007F                     wtemp6	set	127
+  1000  007E                     ttemp	set	126
+  1001  007E                     ttemp0	set	126
+  1002  0081                     ttemp1	set	129
+  1003  0084                     ttemp2	set	132
+  1004  0087                     ttemp3	set	135
+  1005  007F                     ttemp4	set	127
+  1006  007E                     ltemp	set	126
+  1007  007E                     ltemp0	set	126
+  1008  0082                     ltemp1	set	130
+  1009  0086                     ltemp2	set	134
+  1010  0080                     ltemp3	set	128
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        21
+    BSS         18
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      9      12
+    BANK0            80      2      38
+    BANK1            80      0       0
+    BANK2            80      0       0
+    BANK3            80      0       0
+    BANK4            80      0       0
+    BANK5            80      0       0
+    BANK6            80      0       0
+    BANK7            80      0       0
+    BANK8            80      0       0
+    BANK9            80      0       0
+    BANK10           80      0       0
+    BANK11           80      0       0
+    BANK12           48      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    _main->_setUstepH
+
+Critical Paths under _all_ints in COMMON
+
+    _all_ints->_stepperInt
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _all_ints in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _all_ints in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _all_ints in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _all_ints in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _all_ints in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _all_ints in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _all_ints in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _all_ints in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _all_ints in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _all_ints in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _all_ints in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _all_ints in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Critical Paths under _all_ints in BANK12
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 2     2      0      75
+                                              0 BANK0      2     2      0
+                       _initSteppers
+                          _setUstepH
+ ---------------------------------------------------------------------------------
+ (1) _setUstepH                                            7     7      0      75
+                                              2 COMMON     7     7      0
+ ---------------------------------------------------------------------------------
+ (1) _initSteppers                                         0     0      0       0
+                      _resetSteppers
+ ---------------------------------------------------------------------------------
+ (2) _resetSteppers                                        0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (3) _all_ints                                             1     1      0       0
+                                              1 COMMON     1     1      0
+                         _stepperInt
+ ---------------------------------------------------------------------------------
+ (4) _stepperInt                                           1     1      0       0
+                                              0 COMMON     1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 4
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _initSteppers
+     _resetSteppers
+   _setUstepH
+
+ _all_ints (ROOT)
+   _stepperInt
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             3F0      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITCOMMON            E      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               E      9       C       2       85.7%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR2              0      0       0       3        0.0%
+SFR2                 0      0       0       3        0.0%
+STACK                0      0       0       3        0.0%
+BITBANK0            50      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+BANK0               50      2      26       5       47.5%
+BITSFR4              0      0       0       5        0.0%
+SFR4                 0      0       0       5        0.0%
+BITBANK1            50      0       0       6        0.0%
+BITSFR5              0      0       0       6        0.0%
+SFR5                 0      0       0       6        0.0%
+BANK1               50      0       0       7        0.0%
+BITSFR6              0      0       0       7        0.0%
+SFR6                 0      0       0       7        0.0%
+BITBANK2            50      0       0       8        0.0%
+BITSFR7              0      0       0       8        0.0%
+SFR7                 0      0       0       8        0.0%
+BANK2               50      0       0       9        0.0%
+BITSFR8              0      0       0       9        0.0%
+SFR8                 0      0       0       9        0.0%
+BITBANK3            50      0       0      10        0.0%
+BITSFR9              0      0       0      10        0.0%
+SFR9                 0      0       0      10        0.0%
+BANK3               50      0       0      11        0.0%
+BITSFR10             0      0       0      11        0.0%
+SFR10                0      0       0      11        0.0%
+BITBANK4            50      0       0      12        0.0%
+BITSFR11             0      0       0      12        0.0%
+SFR11                0      0       0      12        0.0%
+BANK4               50      0       0      13        0.0%
+BITSFR12             0      0       0      13        0.0%
+SFR12                0      0       0      13        0.0%
+BITBANK5            50      0       0      14        0.0%
+BITSFR13             0      0       0      14        0.0%
+SFR13                0      0       0      14        0.0%
+BANK5               50      0       0      15        0.0%
+BITSFR14             0      0       0      15        0.0%
+SFR14                0      0       0      15        0.0%
+BITBANK6            50      0       0      16        0.0%
+BITSFR15             0      0       0      16        0.0%
+SFR15                0      0       0      16        0.0%
+BANK6               50      0       0      17        0.0%
+BITSFR16             0      0       0      17        0.0%
+SFR16                0      0       0      17        0.0%
+BITBANK7            50      0       0      18        0.0%
+BITSFR17             0      0       0      18        0.0%
+SFR17                0      0       0      18        0.0%
+BANK7               50      0       0      19        0.0%
+BITSFR18             0      0       0      19        0.0%
+SFR18                0      0       0      19        0.0%
+BITSFR19             0      0       0      20        0.0%
+SFR19                0      0       0      20        0.0%
+ABS                  0      0      32      20        0.0%
+BITBANK8            50      0       0      21        0.0%
+BITSFR20             0      0       0      21        0.0%
+SFR20                0      0       0      21        0.0%
+BANK8               50      0       0      22        0.0%
+BITSFR21             0      0       0      22        0.0%
+SFR21                0      0       0      22        0.0%
+BITBANK9            50      0       0      23        0.0%
+BITSFR22             0      0       0      23        0.0%
+SFR22                0      0       0      23        0.0%
+BANK9               50      0       0      24        0.0%
+BITSFR23             0      0       0      24        0.0%
+SFR23                0      0       0      24        0.0%
+BITBANK10           50      0       0      25        0.0%
+BITSFR24             0      0       0      25        0.0%
+SFR24                0      0       0      25        0.0%
+BANK10              50      0       0      26        0.0%
+BITSFR25             0      0       0      26        0.0%
+SFR25                0      0       0      26        0.0%
+BITBANK11           50      0       0      27        0.0%
+BITSFR26             0      0       0      27        0.0%
+SFR26                0      0       0      27        0.0%
+BANK11              50      0       0      28        0.0%
+BITSFR27             0      0       0      28        0.0%
+SFR27                0      0       0      28        0.0%
+BITBANK12           30      0       0      29        0.0%
+BITSFR28             0      0       0      29        0.0%
+SFR28                0      0       0      29        0.0%
+BANK12              30      0       0      30        0.0%
+BITSFR29             0      0       0      30        0.0%
+SFR29                0      0       0      30        0.0%
+BITSFR30             0      0       0      31        0.0%
+SFR30                0      0       0      31        0.0%
+DATA                 0      0      32      31        0.0%
+BITSFR31             0      0       0      32        0.0%
+SFR31                0      0       0      32        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.38 build -256452561 
+Symbol Table                                                                                   Wed Dec 14 00:26:28 2016
+
+            __CFG_CP$OFF 0000                      l725 007A                      _GIE 005F  
+                    _RC4 0074                      _RB6 006E                      _RC5 0075  
+                    _RB7 006F                      u100 0097                      u114 0099  
+                    u147 007F                      u157 008A             __CFG_BORV$LO 0000  
+                    wreg 0009             __CFG_LVP$OFF 0000                     _LATC 010E  
+                   _PEIE 005E                     i1l80 000E                     _TMR0 0015  
+           __CFG_WRT$OFF 0000                     _main 0069                     _posH 0038  
+                   _posV 003A                     fsr0h 0005                     fsr1h 0007  
+                   fsr0l 0004                     indf0 0000                     indf1 0001  
+                   fsr1l 0006                     btemp 007E            __CFG_BOREN$ON 0000  
+                   ltemp 007E                     start 0013                     ttemp 007E  
+                   wtemp 007E            __CFG_IESO$OFF 0000            __CFG_MCLRE$ON 0000  
+                  ?_main 0070            __CFG_WDTE$OFF 0000                    _PORTA 000C  
+                  _PORTB 000D                    _PORTC 000E                    _TRISC 008E  
+         __CFG_FCMEN$OFF 0000                    _homed 0079                    ltemp0 007E  
+                  ltemp1 0082                    ltemp2 0086                    ltemp3 0080  
+                  ttemp0 007E                    ttemp1 0081                    ttemp2 0084  
+                  ttemp3 0087                    ttemp4 007F                    wtemp0 007E  
+                  wtemp1 0080                    wtemp2 0082                    wtemp3 0084  
+                  wtemp4 0086                    wtemp5 0088                    wtemp6 007F  
+        __initialization 0015             __end_of_main 0090           __CFG_LPBOR$OFF 0000  
+                 ??_main 0044      __CFG_USBLSCLK$48MHz 0000            ?_initSteppers 0070  
+                 _OSCCON 0099                   _TMR0IE 005D                   _TMR0IF 005A  
+                 _TRISA5 0465                   _TRISB4 046C                   _TRISC3 0473  
+                 _TRISB5 046D                   _TRISC4 0474                   _TRISB6 046E  
+                 _TRISC5 0475                   _TRISB7 046F                   _TRISC6 0476  
+                 _TRISC7 0477         __end_of_all_ints 0013           __CFG_PWRTE$OFF 0000  
+         __CFG_STVREN$ON 0000                   _pwr2m1 0020                   _moving 007A  
+                 _speedH 003C                   _speedV 003E             __pdataCOMMON 007B  
+         ??_initSteppers 0072    __end_of_resetSteppers 00D1  __end_of__initialization 002E  
+         __pcstackCOMMON 0070             __pidataBANK0 00A7               __pbssBANK0 0034  
+         setUstepH@portc 0076           setUstepH@trisc 0075           setUstepH@ustep 0078  
+             __pmaintext 0069          __CFG_PLLMULT$3x 0000               __pintentry 0004  
+     __size_of_setUstepH 0037                ?_all_ints 0070          _moveElapsedTime 0034  
+             _raStepCode 0025               _rbStepCode 002A               _rcStepCode 002F  
+   __end_of_initSteppers 00A7                  __ptext1 0032                  __ptext2 0090  
+                __ptext3 00D0                  __ptext5 00BB               ??_all_ints 0071  
+                _tgtPosH 0040                  _tgtPosV 0042                  clrloop0 00CA  
+   end_of_initialization 002E                  init_ram 00C3        __end_of_setUstepH 0069  
+                initloop 00C4                _PORTCbits 000E         __CFG_FOSC$INTOSC 0000  
+             _stepperInt 00BB       __CFG_PLLEN$ENABLED 0000            __pidataCOMMON 00CF  
+    start_initialization 0015    __size_of_initSteppers 0017   __size_of_resetSteppers 0001  
+            __pdataBANK0 0020              __pbssCOMMON 0079                ___latbits 0002  
+          __pcstackBANK0 0044             _initSteppers 0090        __size_of_all_ints 000F  
+            ?_stepperInt 0070            setUstepH@code 0077            setUstepH@latc 0074  
+          _resetSteppers 00D0               setUstepH@x 0073                clear_ram0 00C9  
+              _setUstepH 0032      __size_of_stepperInt 0008           ?_resetSteppers 0070  
+             ?_setUstepH 0070                 _all_ints 0004            __size_of_main 0027  
+               _timerVal 007B                 int$flags 007E          ??_resetSteppers 0072  
+               intlevel1 0000             ??_stepperInt 0070        __CFG_CLKOUTEN$OFF 0000  
+            ??_setUstepH 0072     __CFG_CPUDIV$NOCLKDIV 0000               _OPTION_REG 0095  
+     __end_of_stepperInt 00C3  
