@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production/XY1.X.production.hex">
+  <executable name="dist/default/production/sw-xy.production.hex">
     <memory name="program">
-      <units>words</units>
-      <length>8192</length>
-      <used>205</used>
-      <free>7987</free>
+      <units>bytes</units>
+      <length>32768</length>
+      <used>679</used>
+      <free>32089</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
-      <length>1024</length>
-      <used>52</used>
-      <free>972</free>
+      <length>2048</length>
+      <used>67</used>
+      <free>1981</free>
     </memory>
   </executable>
 </project>

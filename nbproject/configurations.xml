@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>xy1.h</itemPath>
       <itemPath>stepper.h</itemPath>
+      <itemPath>config.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
